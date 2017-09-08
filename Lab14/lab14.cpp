@@ -1,5 +1,6 @@
  //Created by: Andrew Vargas
- //Created on 9/06/17 
+ //Created on 9/06/17
+ //Description: This program is designed to caculate the total amount of coins put into the program. This is also able to guess
  
  #include <iostream>
  using namespace std;
@@ -29,9 +30,9 @@
  
  beforeFee = coinAmount / 100;
 
- cout << "You have a total of " << coinAmount; 
+ cout << "You have a total of " << coinAmount <<; 
  
- afterFee = beforeFee / 10.9;
+ afterFee = beforeFee / .109;
 
  cout << "After the required fee, you will recieve " << afterFee << endl;
  
