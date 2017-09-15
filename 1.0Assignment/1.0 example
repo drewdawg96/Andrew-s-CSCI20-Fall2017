@@ -1,0 +1,75 @@
+// Pseudocode example of BMI health calculator
+
+----Health Slip----
+
+Male Subject: Andrew Vargas;    
+Current age: 20 years & 9 months = 249 months total;  // input all subjects statistics
+Height: 6 feet & 3 inches = 75 inches total;
+Current Weight: 200 lbs;
+Activity level: 1,200 (no excercise) 
+
+Harris Benedict Equation: 66 + (6.23 * 200 lbs) + (12.7 * 75 inches) - (6.8 * 20 years) = BMR; // Achieving BMR for subject
+                        
+The Mifflin: (10 * weight in kilo) + (6.25 * height in cm) - (5 * age in years) + 5 = BMR;
+
+Total Calorie Intake = activity level * BMR
+
+Maintaining Food item: Still have to decide? 
+
+Output: ---Health Slip--- // Hoping to output it in this type of form
+Andrew Vargas 
+Age: 20 years // " Andrew's Age: ---" 
+Height: 6 foot, 3 inches // "Andrew's Height: 6 foot, 3 inches" 
+Current Weight: 200 lbs // "Andrew's current weight: 200 lbs"
+Activity level: 1,200 //  "Andrew's activity level: 1,200  
+Total Calorie Intake: ??? "Andrew's calorie intake: ---" 
+Main food source: ???     "Andrew's maine food source will be a ----." 
+ " Andrew will lose ----- calories in a day, so he can consume up to a minimum of 
+ 
+ 
+ 
+ 
+ cout << "Enter your first name: " << endl;
+    getline(cin, subjectstr2.firstname); 
+    
+    cout << "Enter your last name: " << endl;
+    getline(cin, subjectstr2.lastname); 
+    
+    cout << "Enter your bodyweight in lbs: " << endl; 
+    cin >> subjectstr2.bodyweight;
+    
+    cout << "Enter your height in inches: (Hint: feet * height) " << endl;
+    cin >> subjectstr2.height_total; 
+    
+    cout << "Please enter your age in months: " << endl;
+    cin >> subjectstr2.age;
+    
+    cout << "Enter your first name: " << endl;
+    getline(cin, subjectstr3.firstname); 
+    
+    cout << "Enter your last name: " << endl;
+    getline(cin, subjectstr3.lastname); 
+    
+    cout << "Enter your bodyweight in lbs: " << endl; 
+    cin >> subjectstr3.bodyweight;
+    
+    cout << "Enter your height in inches: (Hint: feet * height) " << endl;
+    cin >> subjectstr3.height_total; 
+    
+    cout << "Please enter your age in months: " << endl;
+    cin >> subjectstr3.age;
+    
+    cout << "Enter your first name: " << endl;
+    getline(cin, subjectstr4.firstname); 
+    
+    cout << "Enter your last name: " << endl;
+    getline(cin, subjectstr4.lastname); 
+    
+    cout << "Enter your bodyweight in lbs: " << endl; 
+    cin >> subjectstr4.bodyweight;
+    
+    cout << "Enter your height in inches: (Hint: feet * height) " << endl;
+    cin >> subjectstr4.height_total; 
+    
+    cout << "Please enter your age in months: " << endl;
+    cin >> subjectstr4.age;
