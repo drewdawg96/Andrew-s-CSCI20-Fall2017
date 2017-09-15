@@ -1,7 +1,5 @@
-/* This program is to output specific formulas on windchills. 
-
-
-
+/* This program is to output specific formulas on windchills. Specifically, 
+this should out wind speed, old formula, new formula, and their differences.
 */ 
 
 
