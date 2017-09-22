@@ -10,14 +10,14 @@ Date: 09/20/2017
 using namespace std;
 
 
-int randomGenerator ()
+int randomGenerator () // Function start
 { 
   
   srand(time(0)); 
   
-  int random_num (); // 
+  int random_num (); // Function parameter
   
-  int randomNumber = rand() % 100 + 1;
+  int randomNumber = rand() % 100 + 1; // arguement??
   
   cout << "What number will be generated?" << endl; 
   cout << "Your random number is: " << random_num << endl;
@@ -27,7 +27,7 @@ int randomGenerator ()
 int main()
 { 
   
-  randomGenerator();
+  randomGenerator(); // main user output/ end
 
 }
 
