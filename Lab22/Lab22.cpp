@@ -9,33 +9,29 @@ Date: 09/20/2017
 #include <ctime>
 using namespace std;
 
+void randomGenerator()
 
-int randomGenerator () // Function start
-{ 
-  
-  srand(time(0)); 
-  
-  int random_num (); // Function parameter
-  
-  int randomNumber = rand() % 100 + 1; // arguement??
-  
-  cout << "What number will be generated?" << endl; 
-  cout << "Your random number is: " << random_num << endl;
-  
-} 
-  
+
+
+
 int main()
-{ 
-  
-  randomGenerator(); // main user output/ end
 
+{
+ 
+  cout << "What number will be generated?" << endl; 
+  randomGenerator();
+  
+  cout << "Your random number is: " << 
+  
 }
 
+void randomGenerator ()
   
+{  
   
-  
+  srand(time(0));     // header of function
+  int randomNumber = rand() % 100 + 1;
 
-
-
-
+  return 0;
+}
   
