@@ -14,7 +14,7 @@ using namespace std;
 
 void swapNumber(int &num1, int &num2) { // First function to perform swapping of integers
    
- int placeHolder = num1; 
+ int placeHolder = num1; // swap takes place between num1 and num2
  
  num1 = num2;
  
