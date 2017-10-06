@@ -16,7 +16,7 @@ class RunnerStats { // Runner's Statistics in a class
     public: 
         void setTime( double run_time);
         void setMinutes( int run_minutes); // initializing the Runner's stats... time, speed(mph), top speed, and the split
-        void setMinutes( int run_seconds); 
+        void setSeconds( int run_seconds);  
         void setSpeed( double run_Mph); // speed run set in MPH
         void setTop( double top_time); // top runner's time 
         void setsplitMinutes( int run_splitMinutes); // split of runner's time
@@ -51,9 +51,11 @@ class RunnerStats { // Runner's Statistics in a class
 
 void RunnerStats::printFunc() {
     
-    cout <<  "Your initial run time was: "<< getTime() << " you ran a total of " << getSpeed()   <<  "miles." <<endl;  // User's input of total run time, distance, split and top runner's time
-    cout << "The 1/4 mile split time was: " << getsplitMinutes() << " minutes and " << getsplitSeconds() << " seconds" endl;
-    cout << "The difference between your time and the top time was: " <<  << endl;
+    cout << "Your initial run time was: "<< getTime() << endl;
+    cout << "Your speed was " << getSpeed() << "miles!" << endl; 
+    cout << "Specifically your feet per second ran at " << getfps() << "!" << "and your meters per second came out to " << getmps() << "!" << endl;  
+    cout << "The 1/4 mile split time was: " << getsplitMinutes() << " minutes and " << getsplitSeconds() << " seconds" << endl;
+    cout << "The difference between your time and the top time was: " << " " << endl;
 
 }
 
@@ -136,13 +138,15 @@ int main () { // where the user's information are put through the appropiate equ
         double runnerfps = 0; 
         double runnermps = 0;
         int userTime = 0; 
+        int runnerTime = 0; 
+        
          
         cout << "Please enter your run time minutes: " << endl;
-        cin >> runnerMinutes
+        cin >> runnerMinutes;
         
         cout << "Please enter your run time seconds: " << endl;
-        cin >> runnerSeconds
-        user.setTime(runnerTime);
+        cin >> runnerSeconds;
+        user.setTime(runnerMinutes);
         user.setSeconds(runnerSeconds);
         
         
@@ -154,15 +158,17 @@ int main () { // where the user's information are put through the appropiate equ
         cout << "What was the top winning time? " << endl; 
         cin >> topRunner;
         
-        cout << " "
+        cout << "What was the top win time seconds? " << endl; 
+        cin >> topRunnersec;
+        top.setTime(topRunner);
+        top.setTime(topRunnersec);
         
-        
-        runnerTime = runnerSeconds / 60;
-        runnerfps = (runnerTime / runnerMiles) * 88; 
+        runnerTime = ((runnerMinutes * 60) + runnerSeconds) / 60; 
+        runnerfps = (runnerMiles / runnerTime) * 88; 
         runnermps = (runnerTime / runnerMiles) * 26.8224;  
         
-        userTime = (runnerTime / 60) / runnerMiles; 
-        user.split((userTime / 4) / 60); // the mile time initializing 1/4 split times
+        
+        userTime = (runnerTime / 60) / runnerMiles;
         user.printFunc();
         
         return 0;
