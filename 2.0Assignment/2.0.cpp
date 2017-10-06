@@ -16,11 +16,11 @@ class RunnerStats { // Runner's Statistics in a class
     public: 
         void setTime( double run_time);
         void setMinutes( int run_minutes); // initializing the Runner's stats... time, speed(mph), top speed, and the split
-        void setMinutes( double run_seconds); 
+        void setMinutes( int run_seconds); 
         void setSpeed( double run_Mph); // speed run set in MPH
         void setTop( double top_time); // top runner's time 
         void setsplitMinutes( int run_splitMinutes); // split of runner's time
-        void setsplitSeconds( int run_splitSeconds)
+        void setsplitSeconds( int run_splitSeconds);
         void setfps(double run_Fps); // runner's fps
         void setmps(double run_Mps); // runner's mps
         void printFunc();
@@ -51,8 +51,8 @@ class RunnerStats { // Runner's Statistics in a class
 
 void RunnerStats::printFunc() {
     
-    cout <<  "Your initial run time was: "<< runnerTime << " you ran a total of " << runnerMiles  <<  "miles." <<endl;  // User's input of total run time, distance, split and top runner's time
-    cout << "The 1/4 mile split time was: " << runnerSplit <<endl;
+    cout <<  "Your initial run time was: "<< getTime() << " you ran a total of " << getSpeed()   <<  "miles." <<endl;  // User's input of total run time, distance, split and top runner's time
+    cout << "The 1/4 mile split time was: " << getsplitMinutes() << " minutes and " << getsplitSeconds() << " seconds" endl;
     cout << "The difference between your time and the top time was: " <<  << endl;
 
 }
@@ -61,11 +61,11 @@ void RunnerStats::setTime( double run_time) { // setTime is a RunnerStats member
     user_Time = run_time;
 }
 
-void RunnerStats::setMinutes( double run_minutes) {
+void RunnerStats::setMinutes( int run_minutes) {
     user_Minutes = run_minutes;
 }
 
-void RunnerStats::setSeconds( double run_seconds) {
+void RunnerStats::setSeconds( int run_seconds) {
     user_Seconds = run_seconds;
 }
 
@@ -98,11 +98,11 @@ double RunnerStats:: getTime() {
 }
 
 int RunnerStats:: getMinutes() {
-    return user_Minutes
+    return user_Minutes;
 } 
 
 int RunnerStats:: getSeconds() {
-    return user_Seconds
+    return user_Seconds;
 } 
 
 double RunnerStats:: getSpeed() {
@@ -113,11 +113,11 @@ double RunnerStats:: getTop() {
     return win_Time; 
 }
 
-double RunnerStats::getsplitMinutes() {
+int RunnerStats::getsplitMinutes() {
     return splitMinutes;
 }
 
-double RunnerStats::getsplitSeconds() {
+int RunnerStats::getsplitSeconds() {
     return splitSeconds;
 }
 
@@ -126,20 +126,25 @@ int main () { // where the user's information are put through the appropiate equ
     RunnerStats user;
     RunnerStats top; 
         
-        double runnerTime = 0;
         int runnerMinutes = 0; 
         int runnerSeconds = 0; 
         double runnerMiles = 0; 
         double topRunner = 0;
+        double topRunnersec = 0; 
         double runnerSplit = 0;
-        double userSpeed = 0;
+        double runnerSpeed = 0;
         double runnerfps = 0; 
         double runnermps = 0;
         int userTime = 0; 
          
-        cout << "Please enter your run time in seconds: " << endl;
-        cin >> runnerSeconds;
+        cout << "Please enter your run time minutes: " << endl;
+        cin >> runnerMinutes
+        
+        cout << "Please enter your run time seconds: " << endl;
+        cin >> runnerSeconds
         user.setTime(runnerTime);
+        user.setSeconds(runnerSeconds);
+        
         
         cout << "How many miles did you achieve? " << endl; 
         cin >> runnerMiles;
@@ -148,11 +153,14 @@ int main () { // where the user's information are put through the appropiate equ
         
         cout << "What was the top winning time? " << endl; 
         cin >> topRunner;
-        top.setTime(topRunner);
+        
+        cout << " "
+        
         
         runnerTime = runnerSeconds / 60;
         runnerfps = (runnerTime / runnerMiles) * 88; 
         runnermps = (runnerTime / runnerMiles) * 26.8224;  
+        
         userTime = (runnerTime / 60) / runnerMiles; 
         user.split((userTime / 4) / 60); // the mile time initializing 1/4 split times
         user.printFunc();
