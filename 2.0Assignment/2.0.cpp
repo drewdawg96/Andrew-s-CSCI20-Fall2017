@@ -29,10 +29,10 @@ class RunnerStats { // Runner's Statistics in a class
         double getTime();
         int getMinutes();
         int getSeconds();
-        double getSpeed();
-        double getTop();
         double getfps();
         double getmps();
+        double getSpeed();
+        double getTop();
         int getsplitMinutes();
         int getsplitSeconds(); 
     
@@ -56,7 +56,6 @@ void RunnerStats::printFunc() {
     cout << "Specifically your feet per second ran at " << getfps() << "!" << "and your meters per second came out to " << getmps() << "!" << endl;  
     cout << "The 1/4 mile split time was: " << getsplitMinutes() << " minutes and " << getsplitSeconds() << " seconds" << endl;
     cout << "The difference between your time and the top time was: " << " " << endl;
-
 }
 
 void RunnerStats::setTime( double run_time) { // setTime is a RunnerStats member function along w/ the rest down below 
@@ -123,6 +122,15 @@ int RunnerStats::getsplitSeconds() {
     return splitSeconds;
 }
 
+double RunnerStats:: getfps() {
+    return user_fps; 
+}
+
+double RunnerStats:: getmps() {
+    return user_mps; 
+}
+
+
 int main () { // where the user's information are put through the appropiate equations
     
     RunnerStats user;
@@ -163,9 +171,9 @@ int main () { // where the user's information are put through the appropiate equ
         top.setTime(topRunner);
         top.setTime(topRunnersec);
         
-        runnerTime = ((runnerMinutes * 60) + runnerSeconds) / 60; 
-        runnerfps = (runnerMiles / runnerTime) * 88; 
-        runnermps = (runnerTime / runnerMiles) * 26.8224;  
+        runnerTime = ((runnerMinutes * 60) + runnerSeconds) / 60;  // 1 mile per min = 88 feet per second
+        runnerfps = (runnerMiles / runnerTime) * 88;  // 1 mile per min = 26.8224 meters per second
+        runnermps = (runnerTime / runnerMiles) * 26.8224;  //miles / run time = mile time
         
         
         userTime = (runnerTime / 60) / runnerMiles;
@@ -175,7 +183,5 @@ int main () { // where the user's information are put through the appropiate equ
     
 }
     
-// 1 mile per min = 88 feet per second
-// 1 mile per min = 26.8224 meters per second
-//miles / run time = mile time
+
 
