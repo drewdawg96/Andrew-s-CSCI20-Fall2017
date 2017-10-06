@@ -1,0 +1,31 @@
+/* Pseudocode example of Runner's Race time
+Creator: Andrew Vargas
+Date: 10/2/2017
+*/ 
+---Runner's Race Results---
+
+class Runner Info {
+
+    public:
+     int SetrunTime (int runSeconds) // in minutes and seconds
+     double runnerSpeedMPH // initial speed setting
+     
+    private: 
+     int runSeconds
+     double runSpeed 
+    
+    runnerFPS = (runnerMPH / 2) * 3 // formula to calculate feet per second
+    
+    runnerMPS = runnerMPH *  0.44704 // formula to calculate Meters per second
+    
+    runnerTime = runnerSeconds / 60
+    
+    } 
+
+ int Main 
+
+     cout "Your running time is " // runnerTime
+     cout "Your running speed was " // runnerMPH or runnerFPS
+     
+     // I am confused on how we can find the difference on the runner's time
+    

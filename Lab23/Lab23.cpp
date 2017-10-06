@@ -52,7 +52,7 @@ int main() {  // Final output stage where user will enter thier preffered number
    cout << "Please enter your second number: " << endl; 
    cin >> num2; 
    
-   randomGenerator(num1, num2);
+   randomGenerator(num1, num2); 
    
    
    return 0;  
