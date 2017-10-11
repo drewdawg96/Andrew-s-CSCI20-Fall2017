@@ -36,7 +36,7 @@ class RunnerStats { // Runner's Statistics in a class
         int getsplitMinutes();
         int getsplitSeconds(); 
     
-    private:
+    private:            
         double user_Time;
         int user_Minutes;
         int user_Seconds;
@@ -49,7 +49,7 @@ class RunnerStats { // Runner's Statistics in a class
     
 };
 
-void RunnerStats::printFunc() {
+void RunnerStats::printFunc() {     
     
     cout << "Your initial run time was: "<< getTime() << endl;
     cout << "Your speed was " << getSpeed() << "miles!" << endl; 
