@@ -20,7 +20,18 @@ int main() {
     if (user_Phones < 10) {
         user_lines = 
     
-    // absoulutely lost and will try to fix ASAP
+    }
+    
+    if (user_ < ?) {
+        user_ = 
+    
+    }
+    
+    if (user_ < ?) {
+        user_ = 
+    
+    }
+    // absoulutely lost and stuck on my equations... trying to fix ASAP
     
     
     
